@@ -655,8 +655,13 @@ declare module "underscore" {
     ): ?string,
     extend: typeof $underscore$Extend,
     extendOwn: typeof $underscore$Extend,
-    pick<K, V>(object: { [keys: K]: V }, predicate?: K): { [keys: K]: V },
-    pick<K, V>(object: Array<V>, predicate?: K): { [keys: K]: V },
+    pick<K: Object>(
+      object: K,
+      predicate?:
+        | $Values<K>
+        | Array<$Values<K>>
+        | (($Values<K>, $Keys<K> | null, K | null) => boolean)
+    ): K,
     omit<K, V>(object: { [keys: K]: V }, predicate?: K): { [keys: K]: V },
     defaults(defaults: ?Object, ...mores?: Array<Object>): Object,
     clone<O: {}>(object: O): O,
