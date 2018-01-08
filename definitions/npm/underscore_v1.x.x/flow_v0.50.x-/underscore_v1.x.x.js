@@ -577,7 +577,7 @@ declare module "underscore" {
 
     isEqual(object: Object, b: Object): boolean,
     isMatch(object: Object, b: Object): boolean,
-    isEmpty(object: Object | Array<any>): boolean,
+    isEmpty(object: Object | Array<*> | string): boolean,
     isElement(object: any): boolean,
     isArray(value: any): boolean,
     isObject(value: any): boolean,
@@ -617,7 +617,7 @@ declare module "underscore" {
 
     isEqual(object: any, b: any): boolean,
     isMatch(object: Object, b: Object): boolean,
-    isEmpty(object: Object | Array<any>): boolean,
+    isEmpty(object: Object | Array<*> | string): boolean,
     isElement(object: Object): boolean,
     isArray(value: any): boolean,
     isObject(value: any): boolean,
@@ -678,7 +678,7 @@ declare module "underscore" {
     // TODO _.matcher, _.matches
     isEqual(object: Object, b: Object): boolean,
     isMatch(object: Object, b: Object): boolean,
-    isEmpty(object: Object | Array<any>): boolean,
+    isEmpty(object: Object | Array<*> | string): boolean,
     isElement(object: any): boolean,
     isArray(value: any): boolean,
     isObject(value: any): boolean,
