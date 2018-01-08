@@ -154,6 +154,8 @@ _.find([1, 2, 3], {val: 1});
 (_.isArray([1, 2]): boolean);
 (_.isArray(1): boolean);
 (_.pick({a: 1, b: 2}, 'a'): {[key: string]: number});
+(_.pick({a: 1, b: 2}, ['a', 'b']): {[key: string]: number});
+(_.pick({a: 1, b: true}, ['a', 'b']): {[key: string]: number | bool});
 (_.omit({a: 1, b: 2}, 'a'): {[key: string]: number});
 
 _.throttle(function(a) {a.length}, 10)('hello');

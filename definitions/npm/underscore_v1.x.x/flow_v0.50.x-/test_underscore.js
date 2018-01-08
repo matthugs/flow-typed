@@ -50,8 +50,6 @@ _.extendOwn({name: 'moe'}, {age: 50});
 _.assign({name: 'moe'}, {age: 50});
 */
 
-_.pick(['a', 'b'], 1);
-
 _.defaults({flavor: 'chocolate'}, {flavor: 'vanilla', sprinkles: 'lots'});
 _.defaults({}, {flavor: 'chocolate'});
 _.defaults({flavor: 'chocolate'}, {sprinkles: 'lots'}, {foo: 'bar'}, {foo1: 'bar1'});
